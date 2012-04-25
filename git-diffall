@@ -188,9 +188,9 @@ do
 		then
 			mkdir -p "$tmp/$right_dir/$(dirname "$name")"
 			git show "$right":"$name" >"$tmp/$right_dir/$name" || true
-    else
+		else
 			mkdir -p "$tmp/$right_dir/$(dirname "$name")"
-      touch $tmp/$right_dir/$name
+			touch $tmp/$right_dir/$name
 		fi
 	elif test -n "$compare_staged"
 	then
@@ -199,18 +199,18 @@ do
 		then
 			mkdir -p "$tmp/$right_dir/$(dirname "$name")"
 			git show :"$name" >"$tmp/$right_dir/$name"
-    else
+		else
 			mkdir -p "$tmp/$right_dir/$(dirname "$name")"
-      touch $tmp/$right_dir/$name
+			touch $tmp/$right_dir/$name
 		fi
 	else
 		if test -e "$name"
 		then
 			mkdir -p "$tmp/$right_dir/$(dirname "$name")"
 			cp "$name" "$tmp/$right_dir/$name"
-    else
+		else
 			mkdir -p "$tmp/$right_dir/$(dirname "$name")"
-      touch $tmp/$right_dir/$name
+			touch $tmp/$right_dir/$name
 		fi
 	fi
 done < "$tmp/filelist"
@@ -225,9 +225,9 @@ do
 		then
 			mkdir -p "$tmp/$left_dir/$(dirname "$name")"
 			git show "$left":"$name" >"$tmp/$left_dir/$name" || true
-    else
+		else
 			mkdir -p "$tmp/$left_dir/$(dirname "$name")"
-      touch $tmp/$left_dir/$name
+			touch $tmp/$left_dir/$name
 		fi
 	else
 		if test -n "$compare_staged"
@@ -237,9 +237,9 @@ do
 			then
 				mkdir -p "$tmp/$left_dir/$(dirname "$name")"
 				git show HEAD:"$name" >"$tmp/$left_dir/$name"
-      else
+			else
 				mkdir -p "$tmp/$left_dir/$(dirname "$name")"
-        touch $tmp/$left_dir/$name
+				touch $tmp/$left_dir/$name
 			fi
 		else
 			mkdir -p "$tmp/$left_dir/$(dirname "$name")"
